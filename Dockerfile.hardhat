@@ -1,0 +1,17 @@
+FROM node:20-alpine
+WORKDIR /app
+
+# Copy Hardhat project files
+COPY package.json package-lock.json hardhat.config.ts tsconfig.json ./
+COPY contracts/ contracts/
+COPY scripts/ scripts/
+
+RUN npm ci
+
+# Compile contracts
+RUN npx hardhat compile
+
+EXPOSE 8545
+
+# Start the Hardhat local node
+CMD ["npx", "hardhat", "node", "--hostname", "0.0.0.0"]

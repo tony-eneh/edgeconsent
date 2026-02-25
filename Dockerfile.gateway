@@ -1,0 +1,28 @@
+FROM node:20-alpine
+
+# ── Stage 1: Compile contracts for ABIs ──────────────────────
+WORKDIR /build
+COPY package.json package-lock.json hardhat.config.ts tsconfig.json ./
+COPY contracts/ contracts/
+COPY scripts/ scripts/
+RUN npm ci && npx hardhat compile
+
+# ── Stage 2: Build gateway ───────────────────────────────────
+WORKDIR /build/gateway
+COPY gateway/package.json gateway/package-lock.json ./
+RUN npm ci
+COPY gateway/tsconfig.json ./
+COPY gateway/src/ src/
+RUN npx tsc
+
+# ── Runtime layout ───────────────────────────────────────────
+# Replicate the local relative path: gateway/dist -> ../../artifacts
+# __dirname = /build/gateway/dist
+# resolved  = /build/gateway/dist/../../artifacts = /build/artifacts ✓
+
+EXPOSE 4000
+
+COPY gateway/docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+
+ENTRYPOINT ["/docker-entrypoint.sh"]

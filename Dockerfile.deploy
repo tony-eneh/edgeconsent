@@ -1,0 +1,16 @@
+FROM node:20-alpine
+WORKDIR /app
+
+# Copy Hardhat project (needed for compile + deploy)
+COPY package.json package-lock.json hardhat.config.ts tsconfig.json ./
+COPY contracts/ contracts/
+COPY scripts/ scripts/
+
+RUN npm ci
+RUN npx hardhat compile
+
+# Deploy script that writes contract addresses to shared volume
+COPY docker-deploy.sh /docker-deploy.sh
+RUN chmod +x /docker-deploy.sh
+
+ENTRYPOINT ["/docker-deploy.sh"]
