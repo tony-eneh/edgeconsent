@@ -1,5 +1,5 @@
 /**
- * ConsentChain PEG Gateway — End-to-End Integration Test
+ * EdgeConsent PEG Gateway — End-to-End Integration Test
  *
  * Prerequisites:
  *   1. Hardhat node running (npx hardhat node)
@@ -24,7 +24,7 @@ async function get(path: string): Promise<any> {
 }
 
 async function run(): Promise<void> {
-  console.log("\n=== ConsentChain PEG Gateway E2E Test ===\n");
+  console.log("\n=== EdgeConsent PEG Gateway E2E Test ===\n");
 
   // Hardhat well-known private keys (local dev only!)
   const PATIENT_KEY = "0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d"; // #1

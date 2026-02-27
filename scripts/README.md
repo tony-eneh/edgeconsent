@@ -1,6 +1,6 @@
 # Scripts
 
-Deployment, seeding, and utility scripts for ConsentChain.
+Deployment, seeding, and utility scripts for EdgeConsent.
 
 ## Planned Scripts
 

@@ -28,7 +28,7 @@ async function measureGas(label: string, txPromise: Promise<any>): Promise<GasRe
 async function main() {
   const [admin, patient, hospital, researcher, insurer, regulator] = await ethers.getSigners();
 
-  console.log("=== ConsentChain Gas Benchmark ===\n");
+  console.log("=== EdgeConsent Gas Benchmark ===\n");
   console.log("Signers:");
   console.log(`  Admin:      ${admin.address}`);
   console.log(`  Patient:    ${patient.address}`);

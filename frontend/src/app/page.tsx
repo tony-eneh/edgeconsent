@@ -54,7 +54,7 @@ export default function LandingPage() {
         <div className="max-w-6xl mx-auto flex items-center justify-between px-6 h-16">
           <div className="flex items-center gap-2">
             <Lock className="w-5 h-5 text-primary" />
-            <span className="font-bold text-lg">ConsentChain</span>
+            <span className="font-bold text-lg">EdgeConsent</span>
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted">
             <a href="#features" className="hover:text-foreground transition-colors">
@@ -90,7 +90,7 @@ export default function LandingPage() {
             <span className="text-primary">On-Chain ABAC</span>
           </h1>
           <p className="text-lg text-muted max-w-2xl mx-auto mb-10">
-            ConsentChain replaces coarse-grained binary consent with
+            EdgeConsent replaces coarse-grained binary consent with
             attribute-based policies enforced by smart contracts. Data subjects
             define exactly who can access what, for which purpose, and under
             what conditions — all on-chain.
@@ -104,7 +104,7 @@ export default function LandingPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://github.com/tony-eneh/consentchain"
+              href="https://github.com/tony-eneh/edgeconsent"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-card border border-border text-foreground px-6 py-3 rounded-xl text-sm font-semibold hover:bg-gray-50 transition-colors"
@@ -223,7 +223,7 @@ export default function LandingPage() {
             Launch Dashboard
           </Link>
           <a
-            href="https://github.com/tony-eneh/consentchain#readme"
+            href="https://github.com/tony-eneh/edgeconsent#readme"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-muted hover:text-foreground text-sm transition-colors"
@@ -237,9 +237,9 @@ export default function LandingPage() {
       {/* ─── Footer ─────────────────────────────────────────── */}
       <footer className="bg-sidebar py-8 px-6">
         <div className="max-w-4xl mx-auto flex items-center justify-between text-xs text-sidebar-text/50">
-          <p>ConsentChain — ICBC 2026 Demo • NSL Lab, Kumoh NIT</p>
+          <p>EdgeConsent — ICBC 2026 Demo • NSL Lab, Kumoh NIT</p>
           <a
-            href="https://github.com/tony-eneh/consentchain"
+            href="https://github.com/tony-eneh/edgeconsent"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 hover:text-sidebar-text/80 transition-colors"

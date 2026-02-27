@@ -1,7 +1,7 @@
 {
-  "name": "consentchain",
+  "name": "edgeconsent",
   "version": "1.0.0",
-  "description": "ConsentChain: Fine-Grained Data Consent Management with On-Chain ABAC",
+  "description": "EdgeConsent: Fine-Grained Data Consent Management with On-Chain ABAC",
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",

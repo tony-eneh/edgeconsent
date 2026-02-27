@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ConsentChain",
+  title: "EdgeConsent",
   description: "Fine-Grained Data Consent Management via On-Chain ABAC",
 };
 

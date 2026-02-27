@@ -4,7 +4,7 @@ pragma solidity ^0.8.20;
 import "./Types.sol";
 
 /// @title SubjectAttributeRegistry
-/// @notice Manages processor/requester identity attributes for ConsentChain.
+/// @notice Manages processor/requester identity attributes for EdgeConsent.
 /// @dev Admin registers data processors with their role, org, and jurisdiction.
 ///      Data subjects self-register by calling registerSelf().
 

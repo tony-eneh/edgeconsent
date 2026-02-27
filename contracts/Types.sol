@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-/// @title ConsentChain Shared Types
-/// @notice Enums and structs shared across ConsentChain contracts
+/// @title EdgeConsent Shared Types
+/// @notice Enums and structs shared across EdgeConsent contracts
 /// @dev Adapted from ClaimGuard Types.sol for the consent management domain
 
 // ──────────────────────────────────────────────────────────────

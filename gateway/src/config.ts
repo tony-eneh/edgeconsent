@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export const config = {
-  mode: process.env.MODE || "consentchain",
+  mode: process.env.MODE || "edgeconsent",
   rpcUrl: process.env.RPC_URL || "http://127.0.0.1:8545",
   gatewayPrivateKey: process.env.GATEWAY_PRIVATE_KEY || "",
   contracts: {

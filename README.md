@@ -1,4 +1,4 @@
-# App — ConsentChain Application Code
+# App — EdgeConsent Application Code
 
 This directory contains all application source code:
 

@@ -31,7 +31,7 @@ function AuthGate({ children }: { children: React.ReactNode }) {
         </div>
         <h1 className="text-2xl font-bold mb-2">Connect Your Wallet</h1>
         <p className="text-sm text-muted mb-8">
-          ConsentChain uses wallet-based authentication. Connect MetaMask to
+          EdgeConsent uses wallet-based authentication. Connect MetaMask to
           access the dashboard.
         </p>
 
@@ -75,7 +75,7 @@ function AuthGate({ children }: { children: React.ReactNode }) {
             For the demo, import one of Hardhat&apos;s test accounts into MetaMask.
             The private keys are listed in the{" "}
             <a
-              href="https://github.com/tony-eneh/consentchain#readme"
+              href="https://github.com/tony-eneh/edgeconsent#readme"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary underline"

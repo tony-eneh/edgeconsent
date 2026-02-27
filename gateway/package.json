@@ -1,7 +1,7 @@
 {
-  "name": "consentchain-gateway",
+  "name": "edgeconsent-gateway",
   "version": "1.0.0",
-  "description": "ConsentChain Policy Enforcement Gateway (PEG)",
+  "description": "EdgeConsent Policy Enforcement Gateway (PEG)",
   "main": "dist/index.js",
   "scripts": {
     "dev": "ts-node src/index.ts",

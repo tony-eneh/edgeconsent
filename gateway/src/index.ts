@@ -44,7 +44,7 @@ app.get("/health", (_req, res) => {
 // ─── Start Server ───────────────────────────────────────────
 
 app.listen(config.port, () => {
-  console.log(`\n🔗 ConsentChain PEG Gateway running on http://localhost:${config.port}`);
+  console.log(`\n🔗 EdgeConsent PEG Gateway running on http://localhost:${config.port}`);
   console.log(`   Mode: ${config.mode}`);
   console.log(`   RPC:  ${config.rpcUrl}`);
   console.log(`   Capability TTL: ${config.capabilityTtlSeconds}s\n`);
