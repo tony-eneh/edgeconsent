@@ -107,7 +107,7 @@ export function Sidebar({
       {/* Footer */}
       <div className="p-4 border-t border-white/10 text-xs text-sidebar-text/40">
         <p>ICBC 2026 Demo</p>
-        <p>NSL Lab — Kumoh NIT</p>
+        <p>NSLab — KIT</p>
       </div>
     </aside>
   );

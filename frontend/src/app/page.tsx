@@ -237,7 +237,7 @@ export default function LandingPage() {
       {/* ─── Footer ─────────────────────────────────────────── */}
       <footer className="bg-sidebar py-8 px-6">
         <div className="max-w-4xl mx-auto flex items-center justify-between text-xs text-sidebar-text/50">
-          <p>EdgeConsent — ICBC 2026 Demo • NSL Lab, Kumoh NIT</p>
+          <p>EdgeConsent — ICBC 2026 Demo • NSLab, KIT</p>
           <a
             href="https://github.com/tony-eneh/edgeconsent"
             target="_blank"
