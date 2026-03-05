@@ -1,7 +1,6 @@
 import { ethers, NonceManager } from "ethers";
 import { config } from "./config";
-import path from "path";
-import fs from "fs";
+import { contractAbis } from "./abis";
 
 // ─── Provider & Signer ─────────────────────────────────────
 
@@ -13,25 +12,6 @@ export function createSigner(): NonceManager {
   const provider = createProvider();
   const wallet = new ethers.Wallet(config.gatewayPrivateKey, provider);
   return new NonceManager(wallet);
-}
-
-// ─── ABI Loader ─────────────────────────────────────────────
-
-function loadAbi(contractName: string): any[] {
-  // Look for compiled artifacts from Hardhat
-  const artifactPath = path.resolve(
-    __dirname,
-    "../../artifacts/contracts",
-    `${contractName}.sol`,
-    `${contractName}.json`
-  );
-
-  if (!fs.existsSync(artifactPath)) {
-    throw new Error(`Artifact not found: ${artifactPath}. Run 'npx hardhat compile' first.`);
-  }
-
-  const artifact = JSON.parse(fs.readFileSync(artifactPath, "utf-8"));
-  return artifact.abi;
 }
 
 // ─── Contract Instances ─────────────────────────────────────
@@ -49,10 +29,10 @@ let _abis: { subjectRegistry: any[]; dataRegistry: any[]; consentManager: any[];
 function getAbis() {
   if (_abis) return _abis;
   _abis = {
-    subjectRegistry: loadAbi("SubjectAttributeRegistry"),
-    dataRegistry: loadAbi("DataResourceRegistry"),
-    consentManager: loadAbi("ConsentPolicyManager"),
-    auditLog: loadAbi("ConsentAuditLog"),
+    subjectRegistry: [...contractAbis.subjectRegistry],
+    dataRegistry: [...contractAbis.dataRegistry],
+    consentManager: [...contractAbis.consentManager],
+    auditLog: [...contractAbis.auditLog],
   };
   return _abis;
 }
